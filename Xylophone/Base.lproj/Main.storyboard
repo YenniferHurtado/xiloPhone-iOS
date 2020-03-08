@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,155 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="T2L-uY-Ld2">
+                                <rect key="frame" x="0.0" y="74" width="414" height="768"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5l-EG-uLy" customClass="XiloButton" customModule="Xylophone" customModuleProvider="target">
+                                        <rect key="frame" x="49.5" y="0.0" width="315" height="89"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="315" id="IWi-3O-JnG"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="button"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="button"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C3m-QK-D5A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST0-Ji-5Hk" customClass="XiloButton" customModule="Xylophone" customModuleProvider="target">
+                                        <rect key="frame" x="57" y="97" width="300" height="89"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="eYJ-fd-G7v"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="button"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="button"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D98-ia-9vW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFw-GV-Gn5" customClass="XiloButton" customModule="Xylophone" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="194" width="280" height="89"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="K7s-W5-zZQ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="button"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="button"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AcV-ua-Ipr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4b-QA-3LN" customClass="XiloButton" customModule="Xylophone" customModuleProvider="target">
+                                        <rect key="frame" x="77" y="291" width="260" height="89"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="b8R-Hh-hs4"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="button"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="button"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucN-dz-cZV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3p-a4-FZo" customClass="XiloButton" customModule="Xylophone" customModuleProvider="target">
+                                        <rect key="frame" x="87" y="388" width="240" height="89"/>
+                                        <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="VgD-1i-XiU"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="button"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="button"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nb3-uw-yd7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOL-UK-YFU" customClass="XiloButton" customModule="Xylophone" customModuleProvider="target">
+                                        <rect key="frame" x="92" y="485" width="230" height="89"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="230" id="b7S-ma-N6Q"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="button"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="button"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1sx-2B-pHv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhP-zq-Xs6" customClass="XiloButton" customModule="Xylophone" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="582" width="214" height="89"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="214" id="1EC-yJ-Xtf"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="button"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="button"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v1L-5G-IYR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iy-G8-DCM" customClass="XiloButton" customModule="Xylophone" customModuleProvider="target">
+                                        <rect key="frame" x="107" y="679" width="200" height="89"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="JjB-zc-t5o"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="button"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="button"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ACt-ve-fPp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2iy-G8-DCM" firstAttribute="height" secondItem="F5l-EG-uLy" secondAttribute="height" id="6eR-k9-BHy"/>
+                                    <constraint firstItem="ST0-Ji-5Hk" firstAttribute="height" secondItem="F5l-EG-uLy" secondAttribute="height" id="AUJ-br-AZD"/>
+                                    <constraint firstItem="tOL-UK-YFU" firstAttribute="height" secondItem="F5l-EG-uLy" secondAttribute="height" id="BQr-L7-VY5"/>
+                                    <constraint firstItem="WhP-zq-Xs6" firstAttribute="height" secondItem="F5l-EG-uLy" secondAttribute="height" id="aCR-q5-h1Q"/>
+                                    <constraint firstItem="I4b-QA-3LN" firstAttribute="height" secondItem="F5l-EG-uLy" secondAttribute="height" id="cgH-yJ-Ajb"/>
+                                    <constraint firstItem="l3p-a4-FZo" firstAttribute="height" secondItem="F5l-EG-uLy" secondAttribute="height" id="u7D-wp-4Zz"/>
+                                    <constraint firstItem="FFw-GV-Gn5" firstAttribute="height" secondItem="F5l-EG-uLy" secondAttribute="height" id="y59-fa-Lvn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T2L-uY-Ld2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="3VV-h3-eeK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T2L-uY-Ld2" secondAttribute="trailing" id="ETL-dG-OCK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T2L-uY-Ld2" secondAttribute="bottom" constant="20" id="MFm-7J-kQG"/>
+                            <constraint firstItem="T2L-uY-Ld2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="OcE-Yf-HDl"/>
+                            <constraint firstItem="T2L-uY-Ld2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e1x-4x-UXE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="89.732142857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button" width="300" height="300"/>
+    </resources>
 </document>
